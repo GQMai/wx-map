@@ -1,30 +1,43 @@
-<map longitude="{{longitude}}" enable-3D="true" enable-building="true" latitude="{{latitude}}" bindregionchange="changeMap" bindtap="clickMap" show-location="true" markers="{{[marker]}}"></map>
-<view class="change_model" bindtap="changemodel">
-	<image src="../../asset/change.svg"></image>
-	<view>{{model==0?'转经纬度':'转地址'}}</view>
-</view>
-<view class="fixed_model">
-	<view class="title">{{model==0?'地址':'经纬度'}}</view>
-	<input class="in" bindinput="oninput" value="{{model==0?address:location}}" data-key="{{model==0?'address':'location'}}" placeholder="{{model==0?'拖动地图定位位置或输入地址':'如：22.5401,113.9345'}}" cursor-spacing="20"/>
-	<view class="btn" bindtap="query">
-		<image src="../../asset/local.svg"></image>
-	</view>
+<map longitude="{{longitude}}" enable-3D="true" enable-building="true" latitude="{{latitude}}" bindregionchange="changeMap" bindmarkertap="markerTap" show-location="true" markers="{{markers}}" scale="{{14}}"></map>
+<view class="info_model" hidden="{{info.name == '-'}}">
+  <view class="info_title">{{info.name}}
+  </view>
+  <view class="tag_container">
+    <view class="tag-orange">
+      <text class="tag-text">{{info.class}}</text>
+    </view>
+    <view class="tag-orange">
+      <text class="tag-text">{{info.type}}</text>
+    </view>
+    <view class="tag-orange">
+      <text class="tag-text">{{info.fee}}/月</text>
+    </view>
+  </view>
+  <view class="info_item">
+    <view>地址</view>
+    <view>{{info.address}}</view>
+  </view>
+  <view class="info_item">
+    <view>所属街道</view>
+    <view>{{info.street}}</view>
+  </view>
+  <view class="info_item">
+    <view>电话</view>
+    <view>{{info.phone}}</view>
+  </view>
+  <view class="info_item">
+    <view>举办者</view>
+    <view>{{info.organizer}}</view>
+  </view>
 </view>
 <view class="info_model">
-	<view class="info_item">
-		<view>经纬度</view>
-		<view>{{info.location}}</view>
-	</view>
-	<view class="info_item">
-		<view>推荐地址</view>
-		<view>{{info.formatted}}</view>
-	</view>
-	<view class="info_item">
-		<view>常规地址</view>
-		<view>{{info.address}}</view>
-	</view>
-	<view class="info_item">
-		<view>行政区</view>
-		<view>{{info.adinfo}}</view>
-	</view>
+  <view class="info_item">
+    <view>数据来源</view>
+    <view>
+      <navigator url="https://www.szftedu.cn/gk/xxxx/202302/P020240402526108008524.pdf">福田教育：2024年福田区幼儿园名单.pdf</navigator>
+    </view>
+  </view>
+  <view class="info_item">
+    <text user-select="true" class="text_wrap">https://www.szftedu.cn/gk/xxxx/202302/P020240402526108008524.pdf</text>   
+  </view>
 </view>

@@ -1,6 +1,5 @@
 {
 	"pages": [
-		"pages/index/index",
 		"pages/map/map"
 	],
 	"permission": {
@@ -11,7 +10,7 @@
 	"window": {
 		"backgroundTextStyle": "light",
 		"navigationBarBackgroundColor": "#fff",
-		"navigationBarTitleText": "LBS定位插件",
+		"navigationBarTitleText": "附近的幼儿园",
 		"navigationBarTextStyle": "black"
 	},
 	"style": "v2",
