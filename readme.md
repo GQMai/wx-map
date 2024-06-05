@@ -23,3 +23,9 @@ module.exports = {
   }]
 }
 ```
+## 预览
+![image](https://github.com/GQMai/wx-map/assets/5309276/4cf7d4ea-e552-43cd-a10b-37ddaa5531eb)
+
+## 小程序码
+![image](https://github.com/GQMai/wx-map/assets/5309276/7854e7f7-36dc-44f1-8f86-1294d6fb06c5)
+
